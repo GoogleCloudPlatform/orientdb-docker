@@ -1,4 +1,4 @@
-OrientDB-docker
+orientdb-docker
 ============
 Dockerfile source for OrientDB [docker](https://docker.io) image.
 

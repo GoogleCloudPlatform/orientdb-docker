@@ -1,7 +1,7 @@
-FROM {{ .From }}
+{{- $orientdb := index .Packages "orientdb" -}}
+{{- $template := index .TemplateArgs -}}
 
-{{- $orientdb := index .Packages "orientdb" }}
-{{- $template := index .TemplateArgs }}
+FROM {{ .From }}
 
 {{- $download_server := index .TemplateArgs "download_server" }}
 
