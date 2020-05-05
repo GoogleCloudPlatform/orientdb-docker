@@ -2,13 +2,13 @@ FROM gcr.io/google-appengine/openjdk
 
 # This is release version of OrientDB to pull in.
 ENV ORIENTDB_VERSION 2.2.37
-ENV ORIENTDB_SHA1 dd85f8c22ba850d78809e43fe249e0a1e985b1fd
+ENV ORIENTDB_SHA1 469c402dde029f265fe905de2c08b43960e81f07
 
 ENV C2D_RELEASE 2.2.37
 
-ENV ORIENTDB_DOWNLOAD_SERVER https://api.github.com/repos/orientechnologies/orientdb/tarball/
+ENV ORIENTDB_DOWNLOAD_SERVER https://repo1.maven.org/maven2/com/orientechnologies
 
-ENV ORIENTDB_DOWNLOAD_URL ${ORIENTDB_DOWNLOAD_SERVER}/${ORIENTDB_VERSION}
+ENV ORIENTDB_DOWNLOAD_URL ${ORIENTDB_DOWNLOAD_SERVER}/orientdb-community/${ORIENTDB_VERSION}/orientdb-community-${ORIENTDB_VERSION}.tar.gz
 
 ENV ORIENTDB_HOME /orientdb
 
@@ -20,10 +20,10 @@ RUN set -x \
 # Download distribution tar, untar and delete databases.
 RUN set -x \
   && mkdir ${ORIENTDB_HOME} \
-  && wget ${ORIENTDB_DOWNLOAD_URL} -O ${ORIENTDB_VERSION}.tar.gz \
-  && echo "${ORIENTDB_SHA1} ${ORIENTDB_VERSION}.tar.gz" | sha1sum -c - \
-  && tar -xvzf ${ORIENTDB_VERSION}.tar.gz -C ${ORIENTDB_HOME} --strip-components=1 \
-  && rm ${ORIENTDB_VERSION}.tar.gz \
+  && wget  ${ORIENTDB_DOWNLOAD_URL} \
+  && echo "${ORIENTDB_SHA1} *orientdb-community-${ORIENTDB_VERSION}.tar.gz" | sha1sum -c - \
+  && tar -xvzf orientdb-community-${ORIENTDB_VERSION}.tar.gz -C ${ORIENTDB_HOME} --strip-components=1 \
+  && rm orientdb-community-${ORIENTDB_VERSION}.tar.gz \
   && rm -rf ${ORIENTDB_HOME}/databases/*
 
 # Copy OrientDB license to container image.

@@ -19,7 +19,7 @@
 
 _variables:
   from9: &from9 gcr.io/google-appengine/openjdk
-  download_server: &download_server https://api.github.com/repos/orientechnologies/orientdb/tarball/
+  download_server: &download_server https://repo1.maven.org/maven2/com/orientechnologies
 
 versions:
   - dir: '3/debian9/3.0'
@@ -38,7 +38,7 @@ versions:
     packages:
       orientdb:
         version: '3.0.28'
-        sha1: '85cecd6269c17a4ea8d88b9e7ba03be68c4c0287'
+        sha1: 'fc9f93773576fbf7493dbe8f8c6b784d0165d028'
 
   - dir: '2/debian9/2.2'
     repo: orientdb2
@@ -56,7 +56,7 @@ versions:
     packages:
       orientdb:
         version: '2.2.37'
-        sha1: 'dd85f8c22ba850d78809e43fe249e0a1e985b1fd'
+        sha1: '469c402dde029f265fe905de2c08b43960e81f07'
 
 cloudbuild:
   enable_parallel: false
