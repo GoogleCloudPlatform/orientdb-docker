@@ -17,46 +17,41 @@
 # IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-_variables:
-  from9: &from9 gcr.io/google-appengine/openjdk
-  download_server: &download_server https://repo1.maven.org/maven2/com/orientechnologies
-
-versions:
-  - dir: '3/debian9/3.0'
-    repo: orientdb3
-    templateArgs:
-      download_server: *download_server
-    tags:
-      - '3.0.28-debian9'
-      - '3.0-debian9'
-      - '3-debian9'
-      - '3.0.28'
-      - '3.0'
-      - '3'
-      - 'latest'
-    from: *from9
-    packages:
-      orientdb:
-        version: '3.0.28'
-        sha1: 'fc9f93773576fbf7493dbe8f8c6b784d0165d028'
-
-  - dir: '2/debian9/2.2'
-    repo: orientdb2
-    templateArgs:
-      download_server: *download_server
-    tags:
-      - '2.2.237-debian9'
-      - '2.2-debian9'
-      - '2-debian9'
-      - '2.2.37'
-      - '2.2'
-      - '2'
-      - 'latest'
-    from: *from9
-    packages:
-      orientdb:
-        version: '2.2.37'
-        sha1: '469c402dde029f265fe905de2c08b43960e81f07'
-
 cloudbuild:
   enable_parallel: false
+versions:
+- dir: 3/debian9/3.0
+  from: gcr.io/google-appengine/openjdk
+  packages:
+    orientdb:
+      sha1: 08f2b6dfcfdcd33bbe9f2be8c50be8c1f507efff
+      version: 3.0.31
+  repo: orientdb3
+  tags:
+  - 3.0.31-debian9
+  - 3.0-debian9
+  - 3-debian9
+  - 3.0.31
+  - '3.0'
+  - '3'
+  - latest
+  templateArgs:
+    download_server: https://repo1.maven.org/maven2/com/orientechnologies
+- dir: 2/debian9/2.2
+  from: gcr.io/google-appengine/openjdk
+  packages:
+    orientdb:
+      sha1: 469c402dde029f265fe905de2c08b43960e81f07
+      version: 2.2.37
+  repo: orientdb2
+  tags:
+  - 2.2.37-debian9
+  - 2.2-debian9
+  - 2-debian9
+  - 2.2.37
+  - '2.2'
+  - '2'
+  - latest
+  templateArgs:
+    download_server: https://repo1.maven.org/maven2/com/orientechnologies
+
