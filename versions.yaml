@@ -17,9 +17,27 @@
 # IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 # CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+
 cloudbuild:
   enable_parallel: false
 versions:
+- dir: 3/debian9/3.1
+  from: gcr.io/google-appengine/openjdk
+  packages:
+    orientdb:
+      sha1: 87fb84959d1db9d9ca2277df34d7114b80446e0d
+      version: 3.1.0
+  repo: orientdb3
+  tags:
+  - 3.1.0-debian9
+  - 3.1-debian9
+  - 3-debian9
+  - 3.1.0
+  - '3.1'
+  - '3'
+  - latest
+  templateArgs:
+    download_server: https://repo1.maven.org/maven2/com/orientechnologies
 - dir: 3/debian9/3.0
   from: gcr.io/google-appengine/openjdk
   packages:
@@ -30,11 +48,8 @@ versions:
   tags:
   - 3.0.31-debian9
   - 3.0-debian9
-  - 3-debian9
   - 3.0.31
   - '3.0'
-  - '3'
-  - latest
   templateArgs:
     download_server: https://repo1.maven.org/maven2/com/orientechnologies
 - dir: 2/debian9/2.2
