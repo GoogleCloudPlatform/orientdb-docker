@@ -28,10 +28,8 @@ RUN set -x \
 
 # Copy OrientDB license to container image.
 RUN set -x \
-    # Converts version string to similar format: 3.0.x
-    && export ORIENTDB_LICENSE_VERSION="${ORIENTDB_VERSION%.*}.x" \
     && mkdir -p /usr/share/doc/orientdb \
-    && wget -q "https://raw.githubusercontent.com/orientechnologies/orientdb/${ORIENTDB_LICENSE_VERSION}/license.txt" -O /usr/share/doc/orientdb/LICENSE
+    && wget -q "https://raw.githubusercontent.com/orientechnologies/orientdb/${ORIENTDB_VERSION}/license.txt" -O /usr/share/doc/orientdb/LICENSE
 
 ENV PATH /orientdb/bin:$PATH
 
