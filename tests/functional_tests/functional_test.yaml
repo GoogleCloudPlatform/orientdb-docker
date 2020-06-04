@@ -19,7 +19,7 @@
 
 setup:
 - command: [docker, run, --env, ORIENTDB_ROOT_PASSWORD=some-passwd, --name, some-orientdb-$UNIQUE-id, -d, '$IMAGE']
-- command: [sleep, 5]
+- command: [sleep, 10]
 teardown:
 - command: [docker, stop, some-orientdb-$UNIQUE-id]
 - command: [docker, rm, some-orientdb-$UNIQUE-id]
