@@ -42,13 +42,13 @@ versions:
   from: gcr.io/google-appengine/openjdk
   packages:
     orientdb:
-      sha1: 08f2b6dfcfdcd33bbe9f2be8c50be8c1f507efff
-      version: 3.0.31
+      sha1: e4c3ecca6e4ea2c521d223619daa9c10f4e7b670
+      version: 3.0.32
   repo: orientdb3
   tags:
-  - 3.0.31-debian9
+  - 3.0.32-debian9
   - 3.0-debian9
-  - 3.0.31
+  - 3.0.32
   - '3.0'
   templateArgs:
     download_server: https://repo1.maven.org/maven2/com/orientechnologies
