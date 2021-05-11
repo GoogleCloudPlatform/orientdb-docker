@@ -1,10 +1,10 @@
 FROM gcr.io/google-appengine/openjdk
 
 # This is release version of OrientDB to pull in.
-ENV ORIENTDB_VERSION 3.1.11
-ENV ORIENTDB_SHA1 0c5a13e2cffa51668e20e96eadb2d079f6791e8b
+ENV ORIENTDB_VERSION 3.2.0
+ENV ORIENTDB_SHA1 f424731e3d078de692fab97d6aa3b3e8395d7d01
 
-ENV C2D_RELEASE 3.1.11
+ENV C2D_RELEASE 3.2.0
 
 ENV ORIENTDB_DOWNLOAD_SERVER https://repo1.maven.org/maven2/com/orientechnologies
 
