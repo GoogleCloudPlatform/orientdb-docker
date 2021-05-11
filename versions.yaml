@@ -21,21 +21,35 @@
 cloudbuild:
   enable_parallel: false
 versions:
+- dir: 3/debian9/3.2
+  from: gcr.io/google-appengine/openjdk
+  packages:
+    orientdb:
+      sha1: f424731e3d078de692fab97d6aa3b3e8395d7d01
+      version: 3.2.0
+  repo: orientdb3
+  tags:
+  - 3.2.0-debian9
+  - 3.2-debian9
+  - 3-debian9
+  - 3.2.0
+  - '3.2'
+  - '3'
+  - latest
+  templateArgs:
+    download_server: https://repo1.maven.org/maven2/com/orientechnologies
 - dir: 3/debian9/3.1
   from: gcr.io/google-appengine/openjdk
   packages:
     orientdb:
-      sha1: e6aa30b22169315c2a7420c2a862775c62cedafc
-      version: 3.1.10
+      sha1: 0c5a13e2cffa51668e20e96eadb2d079f6791e8b
+      version: 3.1.11
   repo: orientdb3
   tags:
-  - 3.1.10-debian9
+  - 3.1.11-debian9
   - 3.1-debian9
-  - 3-debian9
-  - 3.1.10
+  - 3.1.11
   - '3.1'
-  - '3'
-  - latest
   templateArgs:
     download_server: https://repo1.maven.org/maven2/com/orientechnologies
 - dir: 2/debian9/2.2
