@@ -25,14 +25,14 @@ versions:
   from: gcr.io/google-appengine/openjdk
   packages:
     orientdb:
-      sha1: f910ed4ae9cf4c4038cd5b1f0cc7b19bf22ada03
-      version: 3.2.4
+      sha256: 92bda37819f7d83ad2db1b499fbac3baf9f28b5eb8ae50e99bb7e231a3797d39
+      version: 3.2.5
   repo: orientdb3
   tags:
-  - 3.2.4-debian9
+  - 3.2.5-debian9
   - 3.2-debian9
   - 3-debian9
-  - 3.2.4
+  - 3.2.5
   - '3.2'
   - '3'
   - latest
@@ -42,7 +42,7 @@ versions:
   from: gcr.io/google-appengine/openjdk
   packages:
     orientdb:
-      sha1: 469c402dde029f265fe905de2c08b43960e81f07
+      sha256: fd74a6395dc29ea438447b4bd254063fa1f9f86dcf7fa776c3e4fc55b9998126
       version: 2.2.37
   repo: orientdb2
   tags:
