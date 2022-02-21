@@ -21,7 +21,7 @@ RUN set -x \
 RUN set -x \
   && mkdir ${ORIENTDB_HOME} \
   && wget  ${ORIENTDB_DOWNLOAD_URL} \
-  && echo "${ORIENTDB_SHA1} *orientdb-community-${ORIENTDB_VERSION}.tar.gz" | sha1sum -c - \
+  && echo "${ORIENTDB_SHA1} *orientdb-community-${ORIENTDB_VERSION}.tar.gz" | sha256sum -c - \
   && tar -xvzf orientdb-community-${ORIENTDB_VERSION}.tar.gz -C ${ORIENTDB_HOME} --strip-components=1 \
   && rm orientdb-community-${ORIENTDB_VERSION}.tar.gz \
   && rm -rf ${ORIENTDB_HOME}/databases/*
