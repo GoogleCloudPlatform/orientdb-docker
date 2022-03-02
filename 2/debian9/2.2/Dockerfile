@@ -2,7 +2,7 @@ FROM gcr.io/google-appengine/openjdk
 
 # This is release version of OrientDB to pull in.
 ENV ORIENTDB_VERSION 2.2.37
-ENV ORIENTDB_SHA1 469c402dde029f265fe905de2c08b43960e81f07
+ENV ORIENTDB_SHA256 fd74a6395dc29ea438447b4bd254063fa1f9f86dcf7fa776c3e4fc55b9998126
 
 ENV C2D_RELEASE 2.2.37
 
@@ -21,7 +21,7 @@ RUN set -x \
 RUN set -x \
   && mkdir ${ORIENTDB_HOME} \
   && wget  ${ORIENTDB_DOWNLOAD_URL} \
-  && echo "${ORIENTDB_SHA1} *orientdb-community-${ORIENTDB_VERSION}.tar.gz" | sha1sum -c - \
+  && echo "${ORIENTDB_SHA256} *orientdb-community-${ORIENTDB_VERSION}.tar.gz" | sha256sum -c - \
   && tar -xvzf orientdb-community-${ORIENTDB_VERSION}.tar.gz -C ${ORIENTDB_HOME} --strip-components=1 \
   && rm orientdb-community-${ORIENTDB_VERSION}.tar.gz \
   && rm -rf ${ORIENTDB_HOME}/databases/*
