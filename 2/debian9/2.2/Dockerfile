@@ -2,7 +2,7 @@ FROM gcr.io/google-appengine/openjdk
 
 # This is release version of OrientDB to pull in.
 ENV ORIENTDB_VERSION 2.2.37
-ENV ORIENTDB_SHA256 fd74a6395dc29ea438447b4bd254063fa1f9f86dcf7fa776c3e4fc55b9998126
+ENV ORIENTDB_SHA256 
 
 ENV C2D_RELEASE 2.2.37
 
