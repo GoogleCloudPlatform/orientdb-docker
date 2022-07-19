@@ -27,10 +27,10 @@ teardown:
 target: some-orientdb-$UNIQUE-id
 tests:
 - name: Create "demoDB" orientdb database with root credentials
-  command: ['console.sh', 'create database remote:localhost/demoDB root some-passwd PLOCAL']
+  command: ['console.sh', 'CONNECT ENV remote:localhost root some-passwd;CREATE DATABASE demoDB plocal']
   expect:
     stdout:
-      matches: 'Current database is: remote:localhost/demoDB'
+      matches: 'demoDB'
 
 - name: List database and get "demoDB" orientdb database with root credentials
   command: ['console.sh', "connect remote:localhost root some-passwd;list databases"]
