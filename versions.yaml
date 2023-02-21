@@ -1,4 +1,4 @@
-# Copyright 2022 Google LLC
+# Copyright 2023 Google LLC
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy of
 # this software and associated documentation files (the "Software"), to deal in
@@ -21,20 +21,38 @@
 cloudbuild:
   enable_parallel: false
 versions:
-- dir: 3/debian9/3.2
+- dir: 3/debian11/3.2
   from: gcr.io/google-appengine/openjdk
   packages:
     orientdb:
-      sha256: ae40f0469aa707cf1293ae64e0517b06b44a9706e5a82fcf79db7ed031fa1883
-      version: 3.2.14
+      sha256: 242a278db7bc15117ea4008b716ac5dcb4c024f3f319aa80a62ad1b1261707a2
+      version: 3.2.16
   repo: orientdb3
   tags:
-  - 3.2.14-debian9
-  - 3.2-debian9
-  - 3-debian9
-  - 3.2.14
+  - 3.2.16-debian11
+  - 3.2-debian11
+  - 3-debian11
+  - 3.2.16
   - '3.2'
   - '3'
   - latest
   templateArgs:
     download_server: https://repo1.maven.org/maven2/com/orientechnologies
+- dir: 2/debian11/2.2
+  from: gcr.io/google-appengine/openjdk
+  packages:
+    orientdb:
+      sha256: fd74a6395dc29ea438447b4bd254063fa1f9f86dcf7fa776c3e4fc55b9998126
+      version: 2.2.37
+  repo: orientdb2
+  tags:
+  - 2.2.37-debian11
+  - 2.2-debian11
+  - 2-debian11
+  - 2.2.37
+  - '2.2'
+  - '2'
+  - latest
+  templateArgs:
+    download_server: https://repo1.maven.org/maven2/com/orientechnologies
+
