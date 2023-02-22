@@ -22,7 +22,7 @@ cloudbuild:
   enable_parallel: false
 versions:
 - dir: 3/debian11/3.2
-  from: gcr.io/google-appengine/openjdk
+  from: marketplace.gcr.io/google/c2d-debian11
   packages:
     orientdb:
       sha256: 242a278db7bc15117ea4008b716ac5dcb4c024f3f319aa80a62ad1b1261707a2
@@ -38,21 +38,3 @@ versions:
   - latest
   templateArgs:
     download_server: https://repo1.maven.org/maven2/com/orientechnologies
-- dir: 2/debian11/2.2
-  from: gcr.io/google-appengine/openjdk
-  packages:
-    orientdb:
-      sha256: fd74a6395dc29ea438447b4bd254063fa1f9f86dcf7fa776c3e4fc55b9998126
-      version: 2.2.37
-  repo: orientdb2
-  tags:
-  - 2.2.37-debian11
-  - 2.2-debian11
-  - 2-debian11
-  - 2.2.37
-  - '2.2'
-  - '2'
-  - latest
-  templateArgs:
-    download_server: https://repo1.maven.org/maven2/com/orientechnologies
-

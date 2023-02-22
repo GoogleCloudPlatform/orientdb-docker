@@ -1,4 +1,4 @@
-FROM gcr.io/google-appengine/openjdk
+FROM marketplace.gcr.io/google/c2d-debian11
 
 # This is release version of OrientDB to pull in.
 ENV ORIENTDB_VERSION 3.2.16
@@ -12,9 +12,9 @@ ENV ORIENTDB_DOWNLOAD_URL ${ORIENTDB_DOWNLOAD_SERVER}/orientdb-community/${ORIEN
 
 ENV ORIENTDB_HOME /orientdb
 
-RUN set -x \
-    && apt update \
-    && apt install -y curl wget \
+RUN set -ex \
+    && apt-get --allow-releaseinfo-change update \
+    && apt install -y default-jdk ca-certificates curl wget \
     && rm -rf /var/lib/apt/lists/*
 
 # Download distribution tar, untar and delete databases.
