@@ -25,17 +25,16 @@ versions:
   from: marketplace.gcr.io/google/c2d-debian11
   packages:
     orientdb:
-      sha256: 55c2f914ae6eb77fa993928b540d8731e4548fc6d580a4618448a395c91770d8
-      version: 3.2.17
+      sha256: 7556793edbaf5e5cd1ef1b920bd9a49308281b875a6b40711c6f13dbdf1d1c2e
+      version: 3.2.19
   repo: orientdb3
   tags:
-  - 3.2.17-debian11
+  - 3.2.19-debian11
   - 3.2-debian11
   - 3-debian11
-  - 3.2.17
+  - 3.2.19
   - '3.2'
   - '3'
   - latest
   templateArgs:
     download_server: https://repo1.maven.org/maven2/com/orientechnologies
-
