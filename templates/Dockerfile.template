@@ -2,7 +2,6 @@ FROM {{ .From }}
 
 {{- $orientdb := index .Packages "orientdb" }}
 {{- $template := index .TemplateArgs }}
-
 {{- $download_server := index .TemplateArgs "download_server" }}
 
 # This is release version of OrientDB to pull in.
