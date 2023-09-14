@@ -38,3 +38,4 @@ versions:
   - latest
   templateArgs:
     download_server: https://repo1.maven.org/maven2/com/orientechnologies
+
