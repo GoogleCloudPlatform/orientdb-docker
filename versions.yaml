@@ -25,14 +25,14 @@ versions:
   from: marketplace.gcr.io/google/c2d-debian11
   packages:
     orientdb:
-      sha256: 71b57160ffcd3c45d725a7f4f768cf43659183032591a667cb9de7830b7ee79e
-      version: 3.2.22
+      sha256: 1c6f66b48a6ef5fff69c4acc6bed58cc4ac7f900db5d4286d8e1dc8d6d8e844b
+      version: 3.2.23
   repo: orientdb3
   tags:
-  - 3.2.22-debian11
+  - 3.2.23-debian11
   - 3.2-debian11
   - 3-debian11
-  - 3.2.22
+  - 3.2.23
   - '3.2'
   - '3'
   - latest
