@@ -1,4 +1,4 @@
-# Copyright 2023 Google LLC
+# Copyright 2024 Google LLC
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy of
 # this software and associated documentation files (the "Software"), to deal in
@@ -25,14 +25,14 @@ versions:
   from: marketplace.gcr.io/google/c2d-debian11
   packages:
     orientdb:
-      sha256: 1c6f66b48a6ef5fff69c4acc6bed58cc4ac7f900db5d4286d8e1dc8d6d8e844b
-      version: 3.2.23
+      sha256: 3429a83b384f0b818e2e1e8279603a12abc93450df92d4ba4bedcff53f049e1e
+      version: 3.2.27
   repo: orientdb3
   tags:
-  - 3.2.23-debian11
+  - 3.2.27-debian11
   - 3.2-debian11
   - 3-debian11
-  - 3.2.23
+  - 3.2.27
   - '3.2'
   - '3'
   - latest
