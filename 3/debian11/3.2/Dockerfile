@@ -2,7 +2,7 @@ FROM marketplace.gcr.io/google/c2d-debian11
 
 # This is release version of OrientDB to pull in.
 ENV ORIENTDB_VERSION 3.2.27
-ENV ORIENTDB_SHA256 3429a83b384f0b818e2e1e8279603a12abc93450df92d4ba4bedcff53f049e1e
+ENV ORIENTDB_SHA256 9dd9d6d0da9383da36050c7f46335313d0e820d3546cd313ead755bb6ead365c
 
 ENV C2D_RELEASE 3.2.27
 
